@@ -13,10 +13,12 @@
             color: white;
             margin: 0;
             padding: 0;
+            scroll-behavior: smooth;
         }
         header {
             padding: 20px;
             background: #1e1e1e;
+            position: relative;
         }
         .banner {
             width: 100%;
@@ -25,15 +27,18 @@
             animation: fadeIn 2s ease-in-out;
         }
         .mascot {
-            width: 200px;
-            margin-top: -50px;
+            width: 150px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             animation: float 3s infinite ease-in-out;
         }
         .container {
             max-width: 800px;
             margin: auto;
-            padding: 20px;
-            text-align: left;
+            padding: 40px 20px;
+            text-align: center;
         }
         .btn {
             display: inline-block;
@@ -45,35 +50,32 @@
             font-weight: 600;
             border-radius: 8px;
             margin: 10px;
-            transition: all 0.3s;
-            animation: fadeInUp 1s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5);
         }
         .btn:hover {
             background: #e6b800;
+            transform: scale(1.05);
         }
-        .tokenomics, .roadmap, .community {
+        .content-box {
             text-align: left;
-            margin: 20px auto;
+            margin: 40px auto;
             max-width: 600px;
-            padding: 15px;
+            padding: 20px;
             background: #1e1e1e;
             border-radius: 8px;
             animation: fadeIn 1.5s ease-in-out;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
         }
         footer {
-            margin-top: 20px;
+            margin-top: 40px;
             padding: 20px;
             background: #1e1e1e;
             font-size: 14px;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         @keyframes float {
             0% { transform: translateY(0px); }
@@ -95,7 +97,7 @@
         <a href="#community" class="btn">Join Our Community</a>
         
         <h2>📊 Tokenomics</h2>
-        <div class="tokenomics">
+        <div class="content-box">
             <p>🔥 <strong>Total Supply:</strong> 1,000,000,000 $NAP</p>
             <p>🎁 <strong>40%</strong> Community Rewards & Airdrops</p>
             <p>🌊 <strong>20%</strong> Liquidity Pool</p>
@@ -105,7 +107,7 @@
         </div>
 
         <h2>🛣 Roadmap</h2>
-        <div class="roadmap">
+        <div class="content-box">
             <p>✅ <strong>Phase 1:</strong> Token Launch & Community Growth</p>
             <p>🚀 <strong>Phase 2:</strong> NFT Airdrops & Listings</p>
             <p>🌍 <strong>Phase 3:</strong> Major Partnerships & Marketing Push</p>
@@ -113,7 +115,7 @@
         </div>
 
         <h2 id="community">🌐 Join Our Community</h2>
-        <div class="community">
+        <div class="content-box">
             <p>Be part of the movement! Follow us on:</p>
             <a href="https://twitter.com/NAPCoinOfficial" class="btn">Twitter</a>
             <a href="https://t.me/NAPCoinCommunity" class="btn">Telegram</a>

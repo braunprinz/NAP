@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAP Coin - Sleep. Earn. Meme.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            background: #1e1e1e;
+        }
+        .banner {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .mascot {
+            width: 200px;
+            margin-top: -50px;
+            animation: float 3s infinite ease-in-out;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: left;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            color: white;
+            background: #ffcc00;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 8px;
+            margin: 10px;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .btn:hover {
+            background: #e6b800;
+        }
+        .tokenomics, .roadmap, .community {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 15px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background: #1e1e1e;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Banner.png" alt="NAP Coin Banner" class="banner">
+        <h1>🚀 $NAP Coin - Sleep. Earn. Meme. 😴💰</h1>
+        <img src="Mascot1.png" alt="NAP Coin Mascot" class="mascot">
+    </header>
+    <div class="container">
+        <h2>Welcome to the Sleepiest Meme Coin on Solana</h2>
+        <p>$NAP Coin is a community-driven meme token. No utility, just pure vibes. Join the movement and ride the wave to the moon! 🌙</p>
+        <a href="#buy" class="btn">Buy $NAP Now</a>
+        <a href="#community" class="btn">Join Our Community</a>
+        
+        <h2>📊 Tokenomics</h2>
+        <div class="tokenomics">
+            <p>🔥 <strong>Total Supply:</strong> 1,000,000,000 $NAP</p>
+            <p>🎁 <strong>40%</strong> Community Rewards & Airdrops</p>
+            <p>🌊 <strong>20%</strong> Liquidity Pool</p>
+            <p>📣 <strong>15%</strong> Marketing & Development</p>
+            <p>🛡 <strong>15%</strong> Reserve Fund</p>
+            <p>👥 <strong>10%</strong> Team Allocation (Locked for 12-24 months)</p>
+        </div>
+
+        <h2>🛣 Roadmap</h2>
+        <div class="roadmap">
+            <p>✅ <strong>Phase 1:</strong> Token Launch & Community Growth</p>
+            <p>🚀 <strong>Phase 2:</strong> NFT Airdrops & Listings</p>
+            <p>🌍 <strong>Phase 3:</strong> Major Partnerships & Marketing Push</p>
+            <p>💎 <strong>Phase 4:</strong> To the Moon!</p>
+        </div>
+
+        <h2 id="community">🌐 Join Our Community</h2>
+        <div class="community">
+            <p>Be part of the movement! Follow us on:</p>
+            <a href="https://twitter.com/NAPCoinOfficial" class="btn">Twitter</a>
+            <a href="https://t.me/NAPCoinCommunity" class="btn">Telegram</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>🚀 $NAP Coin - Sleep. Earn. Meme. | All rights reserved.</p>
+    </footer>
+</body>
+</html>

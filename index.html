@@ -35,7 +35,7 @@
             border-radius: 15px;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             padding: 40px 20px;
             text-align: center;
@@ -60,12 +60,48 @@
         .content-box {
             text-align: left;
             margin: 40px auto;
-            max-width: 600px;
+            max-width: 650px;
             padding: 20px;
             background: #1e1e1e;
             border-radius: 15px;
             animation: fadeIn 1.5s ease-in-out;
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+        }
+        .roadmap {
+            background: #1e1e1e;
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        .roadmap h2 {
+            color: #ffcc00;
+            font-size: 26px;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-left: 20px;
+        }
+        .timeline-item {
+            background: #292929;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            text-align: left;
+            position: relative;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .timeline-item:before {
+            content: "🔹";
+            position: absolute;
+            left: -20px;
+            top: 15px;
+            font-size: 18px;
         }
         footer {
             margin-top: 40px;
@@ -95,7 +131,18 @@
         <p>$NAP Coin is a community-driven meme token. No utility, just pure vibes. Join the movement and ride the wave to the moon! 🌙</p>
         <a href="#buy" class="btn">Buy $NAP Now</a>
         <a href="https://t.me/+Nw7ur-nU2FozOTY6" class="btn">Join Our Community</a>
-        
+
+        <h2>📍 Our Roadmap</h2>
+        <div class="roadmap">
+            <h2>📅 Future Plans for $NAP Coin</h2>
+            <div class="timeline">
+                <div class="timeline-item"><strong>Q1 2024</strong> - Token Launch, Social Media Hype, Airdrops, and Community Growth.</div>
+                <div class="timeline-item"><strong>Q2 2024</strong> - First Exchange Listing, Staking Rewards, NFT Concept Reveal.</div>
+                <div class="timeline-item"><strong>Q3 2024</strong> - More CEX Listings, DAO Governance, Partnerships with Other Projects.</div>
+                <div class="timeline-item"><strong>Q4 2024</strong> - Expanding $NAP to Metaverse, Big Marketing Push, Bigger Exchanges.</div>
+            </div>
+        </div>
+
         <h2>📊 Tokenomics</h2>
         <div class="content-box">
             <p>🔥 <strong>Total Supply:</strong> 1,000,000,000 $NAP</p>
@@ -104,24 +151,6 @@
             <p>📣 <strong>15%</strong> Marketing & Development</p>
             <p>🛡 <strong>15%</strong> Reserve Fund</p>
             <p>👥 <strong>10%</strong> Team Allocation (Locked for 12-24 months)</p>
-        </div>
-
-        <h2>🛒 How to Buy $NAP Coin</h2>
-        <div class="content-box">
-            <p>1️⃣ <strong>Get Solana (SOL)</strong> – Buy SOL on exchanges like Binance, Coinbase, or Kraken.</p>
-            <p>2️⃣ <strong>Set Up a Wallet</strong> – Install Phantom or Solflare and deposit SOL.</p>
-            <p>3️⃣ <strong>Go to Raydium</strong> – Visit <a href="https://raydium.io/" target="_blank">Raydium.io</a> and swap SOL for $NAP.</p>
-            <p>4️⃣ <strong>Join the Community</strong> – Hold, meme, and ride to the moon! 🚀</p>
-        </div>
-
-        <h2>❓ Frequently Asked Questions</h2>
-        <div class="content-box">
-            <p><strong>Q: Can I really make money while sleeping?</strong></p>
-            <p>A: Yes! But only if you HODL $NAP Coin and dream hard enough. 😆</p>
-            <p><strong>Q: Is $NAP a serious investment?</strong></p>
-            <p>A: This is the **sleepiest** meme coin on Solana. Fun first, profits second. 😂</p>
-            <p><strong>Q: Where can I check the price?</strong></p>
-            <p>A: You can track the price on **Raydium** or **DexScreener** once listed.</p>
         </div>
 
         <h2 id="community">🌐 Join Our Community</h2>

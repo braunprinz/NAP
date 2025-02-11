@@ -9,7 +9,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             text-align: center;
-            background-color: #121212;
+            background-color: #0d0d0d;
             color: white;
             margin: 0;
             padding: 0;
@@ -17,97 +17,91 @@
         }
         header {
             padding: 20px;
-            background: #1e1e1e;
+            background: linear-gradient(135deg, #1e1e1e, #292929);
             position: relative;
+            box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
         }
         .banner {
             width: 100%;
-            max-height: 300px;
+            max-height: 400px;
             object-fit: cover;
-            animation: fadeIn 2s ease-in-out;
             border-radius: 15px;
         }
         .mascot {
-            width: 150px;
+            width: 200px;
             display: block;
-            margin: -40px auto 0 auto;
+            margin: -50px auto 0 auto;
             animation: float 3s infinite ease-in-out;
             border-radius: 15px;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
-            text-align: center;
+            padding: 50px 20px;
         }
         .btn {
             display: inline-block;
-            padding: 15px 30px;
+            padding: 15px 35px;
             color: white;
-            background: #ffcc00;
+            background: linear-gradient(135deg, #ffcc00, #e6b800);
             text-decoration: none;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
-            border-radius: 8px;
-            margin: 10px;
+            border-radius: 10px;
+            margin: 15px;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.5);
+            box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
         }
         .btn:hover {
-            background: #e6b800;
-            transform: scale(1.05);
+            transform: scale(1.08);
+            background: linear-gradient(135deg, #e6b800, #d4a700);
         }
         .content-box {
             text-align: left;
-            margin: 40px auto;
-            max-width: 650px;
-            padding: 20px;
+            margin: 50px auto;
+            max-width: 750px;
+            padding: 30px;
             background: #1e1e1e;
             border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
             animation: fadeIn 1.5s ease-in-out;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
         }
         .roadmap {
             background: #1e1e1e;
-            padding: 50px 20px;
+            padding: 60px 20px;
             border-radius: 15px;
-            margin-top: 40px;
-        }
-        .roadmap h2 {
-            color: #ffcc00;
-            font-size: 26px;
+            margin-top: 50px;
         }
         .timeline {
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative;
             padding-left: 20px;
         }
         .timeline-item {
             background: #292929;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            border-radius: 12px;
             width: 90%;
-            max-width: 600px;
+            max-width: 700px;
             text-align: left;
             position: relative;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
             animation: fadeIn 1s ease-in-out;
         }
         .timeline-item:before {
-            content: "🔹";
+            content: "✅";
             position: absolute;
-            left: -20px;
-            top: 15px;
-            font-size: 18px;
+            left: -25px;
+            top: 20px;
+            font-size: 22px;
         }
         footer {
-            margin-top: 40px;
-            padding: 20px;
+            margin-top: 50px;
+            padding: 30px;
             background: #1e1e1e;
-            font-size: 14px;
+            font-size: 16px;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -134,33 +128,14 @@
 
         <h2>📍 Our Roadmap</h2>
         <div class="roadmap">
-            <h2>📅 Future Plans for $NAP Coin</h2>
             <div class="timeline">
-                <div class="timeline-item"><strong>Q1 2024</strong> - Token Launch, Social Media Hype, Airdrops, and Community Growth.</div>
-                <div class="timeline-item"><strong>Q2 2024</strong> - First Exchange Listing, Staking Rewards, NFT Concept Reveal.</div>
-                <div class="timeline-item"><strong>Q3 2024</strong> - More CEX Listings, DAO Governance, Partnerships with Other Projects.</div>
-                <div class="timeline-item"><strong>Q4 2024</strong> - Expanding $NAP to Metaverse, Big Marketing Push, Bigger Exchanges.</div>
+                <div class="timeline-item"><strong>Q1 2024:</strong> Token Launch, Airdrops, Community Growth.</div>
+                <div class="timeline-item"><strong>Q2 2024:</strong> CEX Listings, Staking Rewards, NFT Collection.</div>
+                <div class="timeline-item"><strong>Q3 2024:</strong> More Exchange Listings, DAO Governance.</div>
+                <div class="timeline-item"><strong>Q4 2024:</strong> Expanding $NAP to the Metaverse.</div>
             </div>
         </div>
-
-        <h2>📊 Tokenomics</h2>
-        <div class="content-box">
-            <p>🔥 <strong>Total Supply:</strong> 1,000,000,000 $NAP</p>
-            <p>🎁 <strong>40%</strong> Community Rewards & Airdrops</p>
-            <p>🌊 <strong>20%</strong> Liquidity Pool</p>
-            <p>📣 <strong>15%</strong> Marketing & Development</p>
-            <p>🛡 <strong>15%</strong> Reserve Fund</p>
-            <p>👥 <strong>10%</strong> Team Allocation (Locked for 12-24 months)</p>
-        </div>
-
-        <h2 id="community">🌐 Join Our Community</h2>
-        <div class="content-box">
-            <p>Be part of the movement! Follow us on:</p>
-            <a href="https://x.com/CoinNap52695" class="btn">Twitter</a>
-            <a href="https://t.me/+Nw7ur-nU2FozOTY6" class="btn">Telegram</a>
-        </div>
     </div>
-
     <footer>
         <p>🚀 $NAP Coin - Sleep. Earn. Meme. | All rights reserved.</p>
     </footer>

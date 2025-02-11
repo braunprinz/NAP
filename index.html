@@ -1,143 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAP Coin - Sleep. Earn. Meme.</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background-color: #0d0d0d;
-            color: white;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-        header {
-            padding: 20px;
-            background: linear-gradient(135deg, #1e1e1e, #292929);
-            position: relative;
-            box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
-        }
-        .banner {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
-        .mascot {
-            width: 200px;
-            display: block;
-            margin: -50px auto 0 auto;
-            animation: float 3s infinite ease-in-out;
-            border-radius: 15px;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            color: white;
-            background: linear-gradient(135deg, #ffcc00, #e6b800);
-            text-decoration: none;
-            font-size: 22px;
-            font-weight: 600;
-            border-radius: 10px;
-            margin: 15px;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
-        }
-        .btn:hover {
-            transform: scale(1.08);
-            background: linear-gradient(135deg, #e6b800, #d4a700);
-        }
-        .content-box {
-            text-align: left;
-            margin: 50px auto;
-            max-width: 750px;
-            padding: 30px;
-            background: #1e1e1e;
-            border-radius: 15px;
-            box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        .roadmap {
-            background: #1e1e1e;
-            padding: 60px 20px;
-            border-radius: 15px;
-            margin-top: 50px;
-        }
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-left: 20px;
-        }
-        .timeline-item {
-            background: #292929;
-            padding: 25px;
-            margin: 15px;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 700px;
-            text-align: left;
-            position: relative;
-            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
-            animation: fadeIn 1s ease-in-out;
-        }
-        .timeline-item:before {
-            content: "✅";
-            position: absolute;
-            left: -25px;
-            top: 20px;
-            font-size: 22px;
-        }
-        footer {
-            margin-top: 50px;
-            padding: 30px;
-            background: #1e1e1e;
-            font-size: 16px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAP Coin - Sleep. Earn. Meme.</title>
+  <meta name="description" content="$NAP Coin is the sleepiest meme token on Solana. Join our community and ride the wave to the moon!">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    /* CSS Variables for a consistent color scheme */
+    :root {
+      --background-color: #0d0d0d;
+      --secondary-color: #1e1e1e;
+      --tertiary-color: #292929;
+      --primary-color: #ffcc00;
+      --primary-hover: #e6b800;
+      --text-color: #ffffff;
+      --shadow-color: rgba(255, 204, 0, 0.3);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--secondary-color), var(--tertiary-color));
+      padding: 20px;
+      position: relative;
+      box-shadow: 0px 4px 10px var(--shadow-color);
+    }
+
+    header h1 {
+      margin-top: 20px;
+      font-size: 2em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .mascot {
+      width: 200px;
+      display: block;
+      margin: -50px auto 0;
+      animation: float 3s infinite ease-in-out;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      color: var(--text-color);
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 600;
+      border-radius: 10px;
+      margin: 15px;
+      transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+      box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, var(--primary-hover), #d4a700);
+    }
+
+    .content-box {
+      text-align: left;
+      margin: 50px auto;
+      max-width: 750px;
+      padding: 30px;
+      background: var(--secondary-color);
+      border-radius: 15px;
+      box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .roadmap {
+      background: var(--secondary-color);
+      padding: 60px 20px;
+      border-radius: 15px;
+      margin: 50px 0;
+    }
+
+    .roadmap h2 {
+      margin-bottom: 40px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .timeline-item {
+      background: var(--tertiary-color);
+      padding: 25px;
+      margin: 15px 0;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 700px;
+      text-align: left;
+      position: relative;
+      box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .timeline-item:before {
+      content: "✅";
+      position: absolute;
+      left: -35px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px;
+    }
+
+    footer {
+      background: var(--secondary-color);
+      padding: 30px;
+      font-size: 16px;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .btn {
+        font-size: 18px;
+        padding: 12px 25px;
+      }
+      .mascot {
+        width: 150px;
+        margin-top: -30px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="Banner.png" alt="NAP Coin Banner" class="banner">
-        <h1>🚀 $NAP Coin - Sleep. Earn. Meme. 😴💰</h1>
-    </header>
-    <img src="Mascot1.png" alt="NAP Coin Mascot" class="mascot">
-    <div class="container">
-        <h2>Welcome to the Sleepiest Meme Coin on Solana</h2>
-        <p>$NAP Coin is a community-driven meme token. No utility, just pure vibes. Join the movement and ride the wave to the moon! 🌙</p>
+  <header>
+    <img src="Banner.png" alt="NAP Coin Banner" class="banner">
+    <h1>🚀 $NAP Coin - Sleep. Earn. Meme. 😴💰</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#community">Community</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <img src="Mascot1.png" alt="NAP Coin Mascot" class="mascot">
+      <h2>Welcome to the Sleepiest Meme Coin on Solana</h2>
+      <p>$NAP Coin is a community-driven meme token. No utility, just pure vibes. Join the movement and ride the wave to the moon! 🌙</p>
+      <div>
         <a href="#buy" class="btn">Buy $NAP Now</a>
         <a href="https://t.me/+Nw7ur-nU2FozOTY6" class="btn">Join Our Community</a>
+      </div>
+    </section>
 
-        <h2>📍 Our Roadmap</h2>
-        <div class="roadmap">
-            <div class="timeline">
-                <div class="timeline-item"><strong>Q1 2024:</strong> Token Launch, Airdrops, Community Growth.</div>
-                <div class="timeline-item"><strong>Q2 2024:</strong> CEX Listings, Staking Rewards, NFT Collection.</div>
-                <div class="timeline-item"><strong>Q3 2024:</strong> More Exchange Listings, DAO Governance.</div>
-                <div class="timeline-item"><strong>Q4 2024:</strong> Expanding $NAP to the Metaverse.</div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p>🚀 $NAP Coin - Sleep. Earn. Meme. | All rights reserved.</p>
-    </footer>
+    <section id="roadmap" class="roadmap">
+      <h2>📍 Our Roadmap</h2>
+      <div class="timeline">
+        <div class="timeline-item"><strong>Q1 2024:</strong> Token Launch, Airdrops, Community Growth.</div>
+        <div class="timeline-item"><strong>Q2 2024:</strong> CEX Listings, Staking Rewards, NFT Collection.</div>
+        <div class="timeline-item"><strong>Q3 2024:</strong> More Exchange Listings, DAO Governance.</div>
+        <div class="timeline-item"><strong>Q4 2024:</strong> Expanding $NAP to the Metaverse.</div>
+      </div>
+    </section>
+  </main>
+  <footer id="community">
+    <p>🚀 $NAP Coin - Sleep. Earn. Meme. | All rights reserved.</p>
+  </footer>
 </body>
 </html>

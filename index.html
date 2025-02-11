@@ -4,43 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NAP Coin - Sleep. Earn. Meme.</title>
-  <meta name="description" content="$NAP Coin is a community-driven meme token on Solana that delivers fun, rewards, and pure vibes while you sleep." />
+  <meta name="description" content="$NAP Coin is a community-driven meme token on Solana that blends fun with a professional edge. Join us for rewards, vibes, and a smooth ride to the moon!" />
   <link rel="icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Reset & Global Settings */
+    /* Global Reset & Box Sizing */
     *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
-    /* CSS Variables for easy theming */
+
+    /* CSS Variables for Easy Theming */
     :root {
       --bg-color: #121212;
-      --secondary-color: #1e1e1e;
-      --accent-color: #292929;
+      --header-bg: #1e1e1e;
+      --accent-bg: #292929;
       --primary-color: #ffcc00;
       --primary-hover: #e6b800;
       --text-color: #ffffff;
       --shadow-color: rgba(255, 204, 0, 0.5);
     }
-    
+
+    /* Global Styles */
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-color);
+      background: var(--bg-color);
       color: var(--text-color);
       line-height: 1.6;
       scroll-behavior: smooth;
+      /* A subtle animated background gradient */
+      background: linear-gradient(-45deg, #121212, #1a1a1a, #121212, #1a1a1a);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
     }
-    
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header */
     header {
-      background-color: var(--secondary-color);
+      background-color: var(--header-bg);
       padding: 20px;
       text-align: center;
-      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
-    
+
     header img.banner {
       width: 100%;
       max-height: 300px;
@@ -48,28 +63,46 @@
       border-radius: 10px;
       animation: fadeIn 2s ease-in-out;
     }
-    
+
     header h1 {
       margin-top: 10px;
       font-size: 2rem;
     }
-    
+
+    /* Navigation */
     nav {
-      margin-top: 20px;
+      margin-top: 15px;
     }
-    
+
     nav a {
       color: var(--text-color);
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
+      position: relative;
       transition: color 0.3s ease;
     }
-    
+
+    /* Underline effect on nav links */
+    nav a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: width 0.3s;
+      margin: 5px auto 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
     nav a:hover {
       color: var(--primary-color);
     }
-    
+
+    /* Mascot Image */
     .mascot {
       width: 150px;
       display: block;
@@ -77,17 +110,18 @@
       border-radius: 10px;
       animation: float 3s infinite ease-in-out;
     }
-    
+
+    /* Main Content */
     main {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
-    
+
     .section {
       margin-bottom: 60px;
     }
-    
+
     .section h2 {
       margin-bottom: 20px;
       font-size: 1.8rem;
@@ -95,16 +129,23 @@
       display: inline-block;
       padding-bottom: 5px;
     }
-    
+
+    /* Content Box for Tokenomics, How to Buy, FAQ, etc. */
     .content-box {
-      background-color: var(--secondary-color);
+      background-color: var(--header-bg);
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
       animation: fadeIn 1.5s ease-in-out;
       margin-bottom: 20px;
+      transition: transform 0.3s ease;
     }
-    
+
+    .content-box:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Buttons */
     .btn {
       display: inline-block;
       background-color: var(--primary-color);
@@ -118,36 +159,34 @@
       box-shadow: 0px 4px 10px var(--shadow-color);
       margin: 10px;
     }
-    
+
     .btn:hover {
       transform: scale(1.05);
       background-color: var(--primary-hover);
     }
-    
+
+    /* Footer */
     footer {
-      background-color: var(--secondary-color);
+      background-color: var(--header-bg);
       padding: 20px;
       text-align: center;
       font-size: 0.9rem;
       margin-top: 40px;
     }
-    
-    a {
-      color: var(--primary-color);
-    }
-    
+
+    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    
+
     @keyframes float {
-      0% { transform: translateY(0px); }
+      0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
+      100% { transform: translateY(0); }
     }
-    
-    /* Responsive Adjustments */
+
+    /* Responsive Design */
     @media (max-width: 768px) {
       header h1 {
         font-size: 1.5rem;
@@ -186,7 +225,7 @@
     <!-- About Section -->
     <section id="about" class="section">
       <h2>Welcome to $NAP Coin</h2>
-      <p>$NAP Coin is the sleepiest meme token on Solana. Our community-driven project delivers fun, rewards, and pure vibes while you sleep. Join us, HODL, and ride the wave to the moon! 🌙</p>
+      <p>$NAP Coin is the sleepiest meme token on Solana – where serious fun meets a professional edge. Join us, HODL, and ride the wave to the moon with rewards, vibes, and a dash of mischief! 🌙</p>
       <div>
         <a href="#buy" class="btn">Buy $NAP Now</a>
         <a href="https://t.me/+Nw7ur-nU2FozOTY6" class="btn" target="_blank" rel="noopener noreferrer">Join Our Community</a>
@@ -222,11 +261,11 @@
       <h2>Frequently Asked Questions</h2>
       <div class="content-box">
         <p><strong>Q:</strong> Can I really make money while sleeping?</p>
-        <p><strong>A:</strong> Yes! But only if you HODL $NAP Coin and dream big. 😆</p>
+        <p><strong>A:</strong> Absolutely – if you HODL $NAP Coin and dream big! 😆</p>
         <p><strong>Q:</strong> Is $NAP a serious investment?</p>
-        <p><strong>A:</strong> $NAP is the sleepiest meme coin on Solana – fun first, profits second. 😂</p>
+        <p><strong>A:</strong> $NAP is all about fun with a professional twist – profits come second to the vibe! 😂</p>
         <p><strong>Q:</strong> Where can I check the price?</p>
-        <p><strong>A:</strong> Track the price on <a href="https://raydium.io/" target="_blank" rel="noopener noreferrer">Raydium</a> or DexScreener once listed.</p>
+        <p><strong>A:</strong> Track it on <a href="https://raydium.io/" target="_blank" rel="noopener noreferrer">Raydium</a> or DexScreener once listed.</p>
       </div>
     </section>
     
@@ -234,7 +273,7 @@
     <section id="community" class="section">
       <h2>Join Our Community</h2>
       <div class="content-box">
-        <p>Follow us on social media and become part of the movement!</p>
+        <p>Connect with us on social media and be part of the movement!</p>
         <a href="https://x.com/CoinNap52695" class="btn" target="_blank" rel="noopener noreferrer">Twitter</a>
         <a href="https://t.me/+Nw7ur-nU2FozOTY6" class="btn" target="_blank" rel="noopener noreferrer">Telegram</a>
       </div>
